@@ -13,15 +13,15 @@ cd /Users/KykuMyku/Downloads/
 
 echo
 
-IMG=$(ls *.png *.jpg *.JPG *.psd *.tiff) #картинки
-DOCS=$(ls *.txt *.doc *.docx *.rtf) #документы
+IMG=$(ls *.png *.jpg *.JPG *.psd *.tif *.gif) #картинки
+DOCS=$(ls *.txt *.doc *.docx *.rtf *.rtfd) #документы
 XLS=$(ls *.xls *.xlsx) #таблички
 CSV=$(ls *.csv) #csv
-PDF=$(ls *.pdf) #pdf's
-MEDIA=$(ls *.mp3 *.mp4 *.MP4 *.avi *.AVI *.MOV *.3gp *.m4a) #аудио и видео
+PDF=$(ls *.pdf *.PDF) #pdf's
+MEDIA=$(ls *.mp3 *.mp4 *.MP4 *.wav *.avi *.AVI *.mov *.MOV *.3gp *.m4a) #аудио и видео
 ARCH=$(ls *.rar *.zip *.gz) #архивные файлы
-BOOKS=$(ls *.epub)
-DISTR-$(ls *.dmg *.pkg)
+BOOKS=$(ls *.epub *.fb2) #книги
+DISTR=$(ls *.dmg *.pkg *.exe) #дистрибутивы
 
 #Internal Field Separator. Оставляем в качестве разделителя полей только перевод строки
 IFS=$'\n'
