@@ -80,7 +80,7 @@ do
   mv $file_distr distr/
 done
 
-echo
+echo "Clean Dowloads folder complete"
 
 pwd
 
