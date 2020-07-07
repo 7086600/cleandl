@@ -1,15 +1,10 @@
 #!/bin/bash
 echo "Lets tidy downloads folder"
-echo "Enter path to Downloads folder:"
+echo -n "Enter path to Downloads folder:"
 echo
 
-# read way
+# read way #запрашиваем у пользователь путь до папки Downloads
 cd /Users/KykuMyku/Downloads/
-
-# mv *.pdf pdf/
-# mv *.csv csv/
-# mv *.docx doc/
-# mv *.doc doc/
 
 echo
 
@@ -17,8 +12,8 @@ IMG=$(ls *.png *.jpg *.JPG *.psd *.tif *.gif) #картинки
 DOCS=$(ls *.txt *.doc *.docx *.rtf *.rtfd) #документы
 XLS=$(ls *.xls *.xlsx) #таблички
 CSV=$(ls *.csv) #csv
-PDF=$(ls *.pdf *.PDF) #pdf's
-MEDIA=$(ls *.mp3 *.mp4 *.MP4 *.wav *.avi *.AVI *.mov *.MOV *.3gp *.m4a) #аудио и видео
+PDF=$(ls *.pdf) #pdf's
+MEDIA=$(ls *.mp3 *.mp4 *.MP4 *.wav *.avi *.mov *.3gp *.m4a) #аудио и видео
 ARCH=$(ls *.rar *.zip *.gz) #архивные файлы
 BOOKS=$(ls *.epub *.fb2) #книги
 DISTR=$(ls *.dmg *.pkg *.exe) #дистрибутивы
@@ -80,6 +75,7 @@ do
   mv $file_distr distr/
 done
 
+echo
 echo "Clean Dowloads folder complete"
 
 pwd
