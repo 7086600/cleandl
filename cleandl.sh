@@ -8,7 +8,7 @@ cd /Users/KykuMyku/Downloads/
 
 echo
 
-IMG=$(ls *.png *.jpg *.JPG *.psd *.tif *.gif) #картинки
+IMG=$(ls *.png *.PNG *.jpg *.JPG *.psd *.tif *.tiff *.gif) #картинки
 DOCS=$(ls *.txt *.doc *.docx *.rtf *.rtfd) #документы
 XLS=$(ls *.xls *.xlsx) #таблички
 CSV=$(ls *.csv) #csv
@@ -23,16 +23,23 @@ IFS=$'\n'
 
 # функция для перемещения файлов по папкам
 function cleanDl {
-for file in $IMG
-do
-  mv $file img/
-done
+  #local folder_content
+  folder_target="$1"
+  files="$2"
+  for file in $files
+    do
+      echo $folder_target
+      echo $file
+      #mv $file $folder_target
+
+    done
 }
 
-cleanDl
+cleanDl "i/" "${IMG[@]}"
+cleanDl "d/" "${DOCS[@]}"
 
 echo
-echo "Clean Dowloads folder complete"
+echo "Clean Downloads folder complete"
 pwd
 
 echo
