@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Lets tidy downloads folder"
-echo -n "Enter path to Downloads folder:"
+#echo -n "Enter path to Downloads folder:"
 echo
 
-# read way #запрашиваем у пользователь путь до папки Downloads
-cd /Users/KykuMyku/Downloads/
+read -p "Enter path to Downloads folder: " way #запрашиваем у пользователь путь до папки Downloads
+cd $way
 
 echo
 
@@ -28,9 +28,9 @@ function cleanDl {
   files="$2"
   for file in $files
     do
-      echo $folder_target
-      echo $file
-      #mv $file $folder_target
+      #echo $folder_target
+      #echo $file
+      mv $file $folder_target
 
     done
 }
